@@ -1,8 +1,20 @@
-import express from "express";
-const router=express.Router();
+export const getAllTasks = (req, res) => {
+    res.send(`all items from the file`);
+};
 
-import {getAllTasks} from "../controllers/Tasks.js";
+export const createTask=(req,res)=>{
+    res.json(req.body)
+}
 
-router.route('/').get(getAllTasks)
+export const getTask=(req,res)=>{
+    res.json({id:req.params.id})
+}
 
-export default router;
+export const updateTask=(req,res)=>{
+    res.send(`update task`)
+}
+
+export const deleteTask=(req,res)=>{
+    res.send(`delete task`)
+}
+
